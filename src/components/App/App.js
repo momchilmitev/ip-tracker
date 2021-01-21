@@ -5,8 +5,8 @@ import Map from "../Map/Map";
 
 function App() {
   return (
-    <div className="App">
-      <h1>IP Address Tracker</h1>
+    <div className="app">
+      <h1 className="app__title">IP Address Tracker</h1>
       <Form />
       <Details />
       <Map />

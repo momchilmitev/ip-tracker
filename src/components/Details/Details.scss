@@ -1,0 +1,37 @@
+.details {
+  width: 327px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.0983665);
+  border-radius: 15px;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.detail {
+  text-align: center;
+
+  &:not(&:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1.45833px;
+    color: var(--lightGray);
+    margin-bottom: 7px;
+  }
+
+  &__data {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.178571px;
+    color: var(--darkGray);
+  }
+}

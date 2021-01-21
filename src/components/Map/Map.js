@@ -1,7 +1,7 @@
 import "./Map.scss";
 
 const Map = () => {
-  return <div>Map</div>;
+  return <section className="map">Map</section>;
 };
 
 export default Map;
