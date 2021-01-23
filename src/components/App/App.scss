@@ -16,3 +16,11 @@
     margin-bottom: 29px;
   }
 }
+
+@media (min-width: 992px) {
+  .app {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}
