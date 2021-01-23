@@ -4,6 +4,7 @@
   background-size: 100% 300px;
   overflow: auto;
   height: 100vh;
+  position: relative;
 
   &__title {
     color: #fff;
@@ -21,6 +22,8 @@
   .app {
     &__title {
       font-size: 32px;
+      margin-top: 33px;
+      margin-bottom: 31px;
     }
   }
 }

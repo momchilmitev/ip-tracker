@@ -1,7 +1,7 @@
 .map {
-  position: relative;
+  position: absolute;
   width: 100%;
-  margin-top: -159px;
+  top: 300px;
   height: calc(100vh - 300px);
   z-index: 0;
   background-color: cornflowerblue;
