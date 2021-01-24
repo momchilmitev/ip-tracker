@@ -5,7 +5,7 @@ import markerIcon from "../../assets/icons/icon-location.svg";
 
 const Map = ({ lat, lng }) => {
   useEffect(() => {
-    const myMap = window.L.map("map").setView([lat, lng], 13);
+    let myMap = window.L.map("map").setView([lat, lng], 13);
 
     window.L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -16,8 +16,7 @@ const Map = ({ lat, lng }) => {
         id: "mapbox/streets-v11",
         tileSize: 512,
         zoomOffset: -1,
-        accessToken:
-          "pk.eyJ1IjoibW9tY2hpbG1pdGV2IiwiYSI6ImNqdGQzaGlscDEzNHY0M3A0N3Q2NTZ1b3MifQ.H3ataxUnf9yXk6BH4TWEPA",
+        accessToken: process.env.REACT_APP_MAPBOX_API_KEY,
       }
     ).addTo(myMap);
 
@@ -27,6 +26,11 @@ const Map = ({ lat, lng }) => {
     });
 
     window.L.marker([lat, lng], { icon: myIcon }).addTo(myMap);
+
+    return () => {
+      myMap.off();
+      myMap.remove();
+    };
   }, [lat, lng]);
 
   return <section id="map" className="map"></section>;
