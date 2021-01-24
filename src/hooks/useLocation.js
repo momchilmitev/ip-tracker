@@ -16,6 +16,7 @@ const useLocation = (defaultTerm) => {
 
   useEffect(() => {
     getLocation(defaultTerm);
+    // eslint-disable-next-line
   }, [defaultTerm]);
 
   const getLocation = async (term) => {
